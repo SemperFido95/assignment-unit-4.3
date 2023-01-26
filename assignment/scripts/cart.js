@@ -44,6 +44,7 @@ console.log('basket after empty', basket);
 
 //STRETCH GOALS
 
+//maxItems declared on line 13
 
 function isFull() {
     if (basket.length < maxItems) {
@@ -65,7 +66,31 @@ function addItem(item) {
     }
 } 
 
-addItem('beans');
-addItem('lightsaber');
-addItem('pie');
+//testing new addItem
+console.log(basket);
+console.log(addItem('beans'));
+console.log(addItem('lightsaber'));
+console.log(addItem('pie'));
+console.log(addItem('potato'));
+console.log(addItem('soup'));
+//should return false and not be added to array
+console.log(addItem('extra item')); 
+console.log(basket);
+
+function removeItem(item) {
+    if (basket.indexOf(item) === -1) {
+        return null; 
+    } else {
+        basket.splice(basket.indexOf(item), 1);
+        return `item removed: ${item}`;
+    };
+    
+}
+
+//testing removeItem
+console.log(basket);
+//expected result: 'item removed: pie' in console
+console.log(removeItem('pie')); 
+// expected result: null in console
+console.log(removeItem('donuts')); 
 console.log(basket);

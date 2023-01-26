@@ -26,3 +26,14 @@ listItems();
 
 //testing to see if basket array has proper items
 console.log(basket);
+
+function empty() {
+    while (basket.length > 0) {
+        basket.pop();
+    }
+}
+
+//testing empty function
+empty();
+console.log('basket', basket);
+
